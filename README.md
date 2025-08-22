@@ -1,2 +1,3 @@
-# ajay_sah_portfolio
-Personal portfolio built with Next.js
+# Ajay Sah Portfolio
+
+This is my personal portfolio built with Next.js and Once UI.
