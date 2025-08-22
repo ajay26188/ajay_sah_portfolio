@@ -62,7 +62,7 @@ const home: Home = {
   },
   subline: (
     <>
-      I’m <strong>{person.name}</strong>, a passionate{" "}
+      I’m <strong>{person.name}</strong>, a{" "}
       <strong>{person.role}</strong> with experience in building web
       applications using modern web stacks. I enjoy solving problems
       and creating clean, maintainable solutions.
