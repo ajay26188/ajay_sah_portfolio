@@ -1,5 +1,4 @@
-import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
-import { Logo } from "@once-ui-system/core";
+import { About, Certification, Home, Newsletter, Person, Social, Work } from "@/types";
 
 const person: Person = {
   firstName: "Ajay",
@@ -9,7 +8,7 @@ const person: Person = {
   avatar: "/images/avatar.jpg",
   email: "ajaysah52@gmail.com",
   location: "Europe/Helsinki", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Basic Finnish"], // optional: Leave the array empty if you don't want to display languages
+  languages: ["English", "Basics Finnish"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter: Newsletter = {
@@ -168,15 +167,6 @@ const about: About = {
   },
 };
 
-const blog: Blog = {
-  path: "/blog",
-  label: "Blog",
-  title: "Writing about design and tech...",
-  description: `Read what ${person.name} has been up to recently`,
-  // Create new blog posts by adding a new .mdx file to app/blog/posts
-  // All posts will be listed on the /blog route
-};
-
 const work: Work = {
   path: "/work",
   label: "Work",
@@ -186,55 +176,61 @@ const work: Work = {
   // All projects will be listed on the /home and /work routes
 };
 
-const gallery: Gallery = {
-  path: "/gallery",
-  label: "Gallery",
-  title: `Photo gallery – ${person.name}`,
-  description: `A photo collection by ${person.name}`,
-  // Images by https://lorant.one
-  // These are placeholder images, replace with your own
-  images: [
+const certification: Certification = {
+  path: "/certification",
+  label: "Certification",
+  title: `Certifications – ${person.name}`,
+  description: `A collection of certifications and achievements by ${person.name}`,
+  items: [
     {
-      src: "/images/gallery/horizontal-1.jpg",
-      alt: "image",
-      orientation: "horizontal",
+      title: "Bachelor’s Degree in Software Engineering",
+      issuer: "LUT University",
+      date: "2024", 
+      link: "/images/certifications/bachelor_degree.pdf",
     },
     {
-      src: "/images/gallery/horizontal-2.jpg",
-      alt: "image",
-      orientation: "horizontal",
+      title: "Full-Stack Open",
+      issuer: "University of Helsinki",
+      date: "2025",
+      link: "https://studies.cs.helsinki.fi/stats/api/certificate/fullstackopen/en/202c57402819f1752362a7577069b394",
     },
     {
-      src: "/images/gallery/horizontal-3.jpg",
-      alt: "image",
-      orientation: "horizontal",
+      title: "TypeScript",
+      issuer: "University of Helsinki",
+      date: "2025",
+      link: "https://studies.cs.helsinki.fi/stats/api/certificate/fs-typescript/en/aba229b830592994fa4366617690d522",
     },
     {
-      src: "/images/gallery/horizontal-4.jpg",
-      alt: "image",
-      orientation: "horizontal",
+      title: "GraphQL",
+      issuer: "University of Helsinki",
+      date: "2025",
+      link: "https://studies.cs.helsinki.fi/stats/api/certificate/fullstackopen/en/202c57402819f1752362a7577069b394",
     },
     {
-      src: "/images/gallery/vertical-1.jpg",
-      alt: "image",
-      orientation: "vertical",
+      title: "React Native",
+      issuer: "University of Helsinki",
+      date: "2025",
+      link: "https://studies.cs.helsinki.fi/stats/api/certificate/fs-react-native-2020/en/a9e1d9ec93291ff2ab480fae9fece52e",
     },
     {
-      src: "/images/gallery/vertical-2.jpg",
-      alt: "image",
-      orientation: "vertical",
+      title: "CI/CD",
+      issuer: "University of Helsinki",
+      date: "2025",
+      link: "https://studies.cs.helsinki.fi/stats/api/certificate/fs-cicd/en/149d2d3be0db07083471f4de2591e9f5",
     },
     {
-      src: "/images/gallery/vertical-3.jpg",
-      alt: "image",
-      orientation: "vertical",
+      title: "Containers",
+      issuer: "University of Helsinki",
+      date: "2025",
+      link: "https://studies.cs.helsinki.fi/stats/api/certificate/fs-containers/en/8fa7c029c811be42982bf1178de203ab",
     },
     {
-      src: "/images/gallery/vertical-4.jpg",
-      alt: "image",
-      orientation: "vertical",
+      title: "Relational Databases",
+      issuer: "University of Helsinki",
+      date: "2025",
+      link: "https://studies.cs.helsinki.fi/stats/api/certificate/fs-psql/en/65bd34a282b342b728e84c4071723943",
     },
   ],
 };
 
-export { person, social, newsletter, home, about, blog, work, gallery };
+export { person, social, newsletter, home, about, work, certification };

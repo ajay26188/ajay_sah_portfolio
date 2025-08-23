@@ -1,0 +1,12 @@
+.cert-card {
+    border: 1px solid var(--neutral-alpha-weak);
+    padding: 1rem;
+    border-radius: 12px;
+    transition: var(--transition-micro-medium);
+  
+    &:hover {
+      transform: translateX(var(--static-space-8));
+      box-shadow: var(--shadow-m);
+    }
+  }
+  

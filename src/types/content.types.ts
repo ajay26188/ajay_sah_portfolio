@@ -205,29 +205,33 @@ export interface About extends BasePageConfig {
 }
 
 /**
- * Blog page configuration.
- * @description Configuration for the Blog page, including metadata and navigation label.
- */
-export interface Blog extends BasePageConfig {}
-
-/**
  * Work/projects page configuration.
  * @description Configuration for the Work/Projects page, including metadata and navigation label.
  */
 export interface Work extends BasePageConfig {}
 
 /**
- * Gallery page configuration.
- * @description Configuration for the Gallery page, including metadata, navigation label, and image list.
+ * Certification page configuration.
+ * @description Configuration for the Certifications page, including metadata and a list of certificates.
  */
-export interface Gallery extends BasePageConfig {
-  /** List of images in the gallery */
-  images: Array<{
-    /** Image source path */
-    src: string;
-    /** Image alt text */
-    alt: string;
-    /** Image orientation (horizontal/vertical) */
-    orientation: string;
+export interface Certification extends BasePageConfig {
+  /** List of certifications */
+  items: Array<{
+    /** Certificate title */
+    title: string;
+    /** Issuing organization */
+    issuer: string;
+    /** Issue date */
+    date: string;
+    /** Credential ID or number (optional) */
+    credentialId?: string;
+    /** Link to certificate (optional) */
+    link?: string;
+    /** Certificate image (optional, e.g., badge or pdf preview) */
+    image?: {
+      src: string;
+      alt: string;
+    };
   }>;
 }
+
