@@ -8,7 +8,7 @@ const person: Person = {
   avatar: "/images/avatar.jpg",
   email: "ajaysah52@gmail.com",
   location: "Europe/Helsinki", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Basics Finnish"], // optional: Leave the array empty if you don't want to display languages
+  languages: ["English"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter: Newsletter = {
