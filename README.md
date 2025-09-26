@@ -1,3 +1,4 @@
 # Ajay Sah Portfolio
 
-This is my personal portfolio built with Next.js and Once UI.
+Welcome to my personal portfolio, built with **Next.js** and **Once UI**.  
+Explore my projects, skills, and experience here: [View Portfolio](https://ajay-sah-portfolio.vercel.app/)
