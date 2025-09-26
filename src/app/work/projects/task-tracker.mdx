@@ -1,9 +1,16 @@
 ---
 title: "TaskTracker – A Full-Stack Project Management App"
-publishedAt: "2025-08-18"
-summary: "Full-stack project management tool with live deployments, CI/CD pipelines, and advanced authentication (email verification, password reset, role-based access)."
+publishedAt: "2025-09-20"
+summary: "Full-stack project management tool with live deployments, CI/CD pipelines, Kanban board, real-time notifications, and advanced authentication (email verification, password reset, role-based access)."
 images:
-  - "/images/projects/task-tracker/cover-01.jpg"
+  - "/images/projects/task-tracker/Landing.jpg"
+  - "/images/projects/task-tracker/Dashboard.jpg"
+  - "/images/projects/task-tracker/Users.jpg"
+  - "/images/projects/task-tracker/Projects.jpg"
+  - "/images/projects/task-tracker/Project.jpg"
+  - "/images/projects/task-tracker/Tasks.jpg"
+  - "/images/projects/task-tracker/Task.jpg"
+  - "/images/projects/task-tracker/Comments.jpg"
 link: "https://task-tracker-seven-green.vercel.app/"
 team:
   - name: "Ajay Sah"
@@ -12,23 +19,37 @@ team:
     linkedIn: "https://www.linkedin.com/in/your-profile"
 ---
 
-## Overview
+## 🔑 Demo Login (Quick Try)
 
-**TaskTracker** is a modern, full-stack project management app designed for teams to **collaborate, assign tasks, and track progress**.  
-The app emphasizes **clean architecture, scalability, and real-world practices** such as role-based access, modular API design, and automated deployments.  
+Use these demo accounts to explore the app without signing up:
 
-Currently, backend and frontend are integrated and live (~120 hours logged).  
-Development follows a company-like workflow with a public log available in the [TaskTracker GitHub Repository](https://github.com/ajay26188/task_tracker).  
+- **Admin (demo)**  
+  Email: `admin@example.com`  
+  Password: `AdminPass123!`
+
+- **Member (demo)**  
+  Email: `membera@example.com`  
+  Password: `MemberPass123!`
+
+> 🔒 Note: These are demo-only accounts (created for showcasing the app). They use `@example.com` and bypass email verification so recruiters can jump straight in.
 
 ---
 
-## Project Status
+## Overview
 
-- **Backend**: Authentication, organizations, projects, and tasks functional with role-based access control.  
-- **Frontend**: Live UI connected to backend APIs with secure login and Redux-powered notifications.  
-- **CI/CD**: Automated pipelines ensure only passing builds are deployed.  
-  - **Backend** on Render  
-  - **Frontend** on Vercel  
+**TaskTracker** is a modern, full-stack project management app designed for teams to **collaborate, assign tasks, and track progress in real time**.  
+The app emphasizes **clean architecture, and production-grade workflows**, including role-based access, modular APIs, real-time updates, and automated deployments.
+
+Currently, both backend and frontend are fully integrated and deployed (~190 hours logged).  
+Development follows a **company-like workflow** with a public log available in the [TaskTracker GitHub Repository](https://github.com/ajay26188/task_tracker).
+
+---
+
+## 📌 Project Status
+
+- **Backend**: Completed.  
+- **Frontend**: Completed.  
+- **CI/CD**: Automated pipelines configured.  
 
 Development log: [working_hours.md](https://github.com/ajay26188/task_tracker/blob/main/working_hours.md)
 
@@ -37,76 +58,87 @@ Development log: [working_hours.md](https://github.com/ajay26188/task_tracker/bl
 ## 🚀 Deployment
 
 - **Backend API (Render):** [https://tasktracker-fr5h.onrender.com](https://tasktracker-fr5h.onrender.com)  
-  - Healthcheck: [https://tasktracker-fr5h.onrender.com/ping](https://tasktracker-fr5h.onrender.com/ping) → `"pong"`  
+  - Healthcheck: [https://tasktracker-fr5h.onrender.com/ping](https://tasktracker-fr5h.onrender.com/ping) → `"pong"`
 
 - **Frontend (Vercel):** [https://task-tracker-seven-green.vercel.app/](https://task-tracker-seven-green.vercel.app/)
 
 ---
 
-## 🔧 Features Built So Far
+## 🔧 Features
 
-- **Authentication & Authorization**  
-  - JWT-based auth  
-  - Role-based access control  
-  - Email verification flow  
-  - Password reset via secure token  
+### 🔑 Authentication & Authorization
+- JWT-based authentication  
+- Role-based UI and access control  
+- Email verification flow  
+- Password reset via secure token  
 
-- **Organizations**: Company-level data isolation  
+### 🏢 Organizations
+- Data isolation at the organization level  
+- Admins manage projects and teams independently  
 
-- **Projects & Tasks**  
-  - APIs for project and task creation  
-  - Query-based filtering (`GET /api/tasks?projectId=...`)  
+### 📂 Projects & Tasks
+- Create, update, and assign tasks  
+- Query-based filtering (`GET /api/tasks?projectId=...`)  
+- Pagination for large task sets  
 
-- **Validation & Error Handling**  
-  - Strong input validation with Zod  
-  - Consistent error/response conventions  
-  - Centralized backend error middleware  
+### 🗂️ Kanban Board
+- **Drag & Drop Tasks** across **To Do**, **In Progress**, and **Done**  
+- Optimistic UI updates with backend sync and rollback safety  
+- Smooth animations with **Framer Motion**  
+- Assignee avatars (initials) on tasks  
+- Real-time updates across all team members via **Socket.IO**
 
-- **Frontend Integration**  
-  - Secure login via UI  
-  - Redux Toolkit for state + typed slices  
-  - Global notification system for login/signup events  
+### 💬 Real-Time Collaboration
+- **Notifications**:  
+  - Instant alerts when tasks are assigned/updated  
+  - Bell icon with unread badge + history pagination  
+  - Mark single/all as read  
+
+- **Comments on Tasks**:  
+  - Real-time chat-like experience with auto-scroll and highlights  
+
+### ⚙️ Backend (Node.js + Express + MongoDB + Mongoose)
+- Auth system with JWT + role-based middleware  
+- Zod validation schemas for all endpoints  
+- Task APIs with filtering and pagination  
+- Notification system with personalized messages  
+- Email verification and password reset (Brevo + Nodemailer)  
+- Database seeding for realistic demo data  
+- Centralized error handling with JSON responses  
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: React + TypeScript  
-- **State Management**: Redux Toolkit  
-- **Backend**: Node.js + Express  
-- **Database**: MongoDB + Mongoose  
-- **Validation**: Zod  
-- **Authentication**: JWT (access control)  
-- **Email Service**: Nodemailer (verification & reset)  
-- **Error Handling**: Backend error middleware + Redux-powered alerts  
-- **Dev Tools**: ESLint, TypeScript, Nodemon  
+- **Frontend:** React + TypeScript, Redux Toolkit, Framer Motion  
+- **Backend:** Node.js, Express, MongoDB, Mongoose  
+- **Real-Time:** Socket.IO (notifications, comments, Kanban updates)  
+- **Validation:** Zod  
+- **Auth:** JWT with role-based middleware  
+- **Email Service:** Nodemailer + Brevo  
+- **CI/CD:** GitHub Actions → Render (backend), Vercel (frontend)  
+- **Dev Tools:** ESLint, TypeScript, Nodemon  
 
 ---
 
-## Roadmap (Next Steps)
+## 📚 Challenges & Learnings
 
-- Build **Kanban-style task board** for project visualization  
-- Add task completion tracking & history  
-- Implement dashboards with charts & insights  
-- Support file uploads for tasks  
-
----
-
-## Challenges & Learnings
-
-- Balancing **API flexibility** with consistent contracts.  
-- Ensuring **organization-based isolation** early for scalability.  
-- Using Zod schemas to enforce **strict validation** and reduce runtime errors.  
-- Designing CI/CD pipelines to simulate **real-world team workflows**.  
+- Balancing API flexibility with consistent contracts  
+- Enforcing **organization-based isolation** early for scalability  
+- Efficient **task pagination** for large datasets  
+- Using **Zod schemas** to enforce strict validation and reduce runtime errors  
+- Designing **CI/CD pipelines** to simulate team workflows  
+- Debugging Vercel cold start issues with uptime strategies  
+- Switching SMTP → Brevo HTTPS integration to maintain free-tier compatibility  
 
 ---
 
-## Outcome (so far)
+## 📊 Outcome
 
-TaskTracker already demonstrates:  
-- A strong backend foundation with auth, orgs, projects, and tasks.  
-- Live frontend integrated with backend APIs.  
-- Scalable patterns for future features like dashboards and Kanban boards.  
-- A company-like workflow with modular code, CI/CD, and detailed logs.  
+TaskTracker demonstrates:  
+- A **complete full-stack project** with authentication, organizations, projects, tasks, and Kanban workflows  
+- **Real-time collaboration features** (notifications, drag-and-drop, comments)  
+- Automated **CI/CD pipelines** for professional-grade deployments  
+- A **portfolio-ready showcase project** built with ~190 hours of logged work  
 
-When complete, TaskTracker will serve as both a **portfolio showcase** and a **learning milestone** in full-stack development.  
+When complete, TaskTracker will stand as both a **portfolio centerpiece** and a **learning milestone** in building scalable, real-world full-stack applications.

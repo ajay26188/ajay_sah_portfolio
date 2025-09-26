@@ -86,10 +86,10 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        I’m Ajay, a Software Developer with a background in Software Engineering
-        and hands-on experience in building full-stack applications. My interest
-        lies in modern web development and creating projects that
-        combine functionality with great user experience.
+        I’m Ajay, a Software Developer with a background in Software Engineering and hands-on experience building full-stack applications. Through projects like TaskTracker, I’ve grown to appreciate not just coding, but also designing user-friendly interfaces, ensuring secure backend development with proper user restrictions, and thinking deeply about the user experience.
+        <br/>
+        <br/>
+        Along the way, I’ve learned to tackle real-world challenges — from debugging complex issues to solving deployment cold-start problems on platforms like Vercel. These experiences have made me more practical, adaptable, and problem-solving oriented.
       </>
     ),
   },
